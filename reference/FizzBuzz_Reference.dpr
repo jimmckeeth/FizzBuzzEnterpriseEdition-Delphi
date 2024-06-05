@@ -1,6 +1,6 @@
 // Maybe not the simplest, but a nice middle of the road reference implementation of FizzBuzz
 // https://github.com/jimmckeeth/FizzBuzzEnterpriseEdition-Delphi/
-program FizzBuzz;
+program FizzBuzz_Reference;
 
 {$APPTYPE CONSOLE}
 

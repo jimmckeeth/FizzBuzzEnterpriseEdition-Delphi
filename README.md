@@ -15,19 +15,6 @@ For numbers 1 through 100,
 
 ## Inspiration
 * [The Java editon](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition) (I believe the original)
-  * 89 Java files
-  * with 2126 lines
-    * 496 blank
-    * 739 comments
-    * 1386 code   
+  * 89 Java files with 2126 lines (496 blank, 739 comments, 1386 code)   
 * [The C# Edition](https://github.com/jongeorge1/FizzBuzzEnterpriseEdition-CSharp)
-  * 48 C# files
-  * Over 6 projects
-  * with 1538 C# lines
-    * 122 blank
-    * 840 commnets
-    * 698 code
-  * 6 MSBuild scripts
-    * 42 comments
-    * 368 code
-    * 410 total lines
+  * 48 C# files, over 6 projects, with 1538 C# lines (122 blank, 840 commnets, 698 code)

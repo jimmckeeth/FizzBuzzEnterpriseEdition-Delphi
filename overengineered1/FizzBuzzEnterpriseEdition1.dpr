@@ -1,6 +1,6 @@
 // Slightly overengineered implementation of FizzBuzz
 // https://github.com/jimmckeeth/FizzBuzzEnterpriseEdition-Delphi/
-program FizzBuzzEnterpriseEdition;
+program FizzBuzzEnterpriseEdition1;
 
 {$APPTYPE CONSOLE}
 

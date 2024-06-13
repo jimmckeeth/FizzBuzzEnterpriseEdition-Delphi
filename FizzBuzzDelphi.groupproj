@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{BC9BE4D7-6B4D-4A8B-AE7A-40125071F3FC}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="reference\FizzBuzz_Reference.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="overengineered1\FizzBuzzEnterpriseEdition1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="overengineered2\FizzBuzzEnterpriseEdition2.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="overengineered3\FizzBuzzEnterpriseEdition3.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FizzBuzz_Reference">
+        <MSBuild Projects="reference\FizzBuzz_Reference.dproj"/>
+    </Target>
+    <Target Name="FizzBuzz_Reference:Clean">
+        <MSBuild Projects="reference\FizzBuzz_Reference.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FizzBuzz_Reference:Make">
+        <MSBuild Projects="reference\FizzBuzz_Reference.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition1">
+        <MSBuild Projects="overengineered1\FizzBuzzEnterpriseEdition1.dproj"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition1:Clean">
+        <MSBuild Projects="overengineered1\FizzBuzzEnterpriseEdition1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition1:Make">
+        <MSBuild Projects="overengineered1\FizzBuzzEnterpriseEdition1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition2">
+        <MSBuild Projects="overengineered2\FizzBuzzEnterpriseEdition2.dproj"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition2:Clean">
+        <MSBuild Projects="overengineered2\FizzBuzzEnterpriseEdition2.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition2:Make">
+        <MSBuild Projects="overengineered2\FizzBuzzEnterpriseEdition2.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition3">
+        <MSBuild Projects="overengineered3\FizzBuzzEnterpriseEdition3.dproj"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition3:Clean">
+        <MSBuild Projects="overengineered3\FizzBuzzEnterpriseEdition3.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FizzBuzzEnterpriseEdition3:Make">
+        <MSBuild Projects="overengineered3\FizzBuzzEnterpriseEdition3.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FizzBuzz_Reference;FizzBuzzEnterpriseEdition1;FizzBuzzEnterpriseEdition2;FizzBuzzEnterpriseEdition3"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FizzBuzz_Reference:Clean;FizzBuzzEnterpriseEdition1:Clean;FizzBuzzEnterpriseEdition2:Clean;FizzBuzzEnterpriseEdition3:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FizzBuzz_Reference:Make;FizzBuzzEnterpriseEdition1:Make;FizzBuzzEnterpriseEdition2:Make;FizzBuzzEnterpriseEdition3:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

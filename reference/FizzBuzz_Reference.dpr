@@ -31,4 +31,5 @@ begin
     on E: Exception do
       WriteLn(E.ClassName, ': ', E.Message);
   end;
+  Readln;
 end.

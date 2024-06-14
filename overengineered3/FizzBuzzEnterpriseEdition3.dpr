@@ -193,7 +193,8 @@ begin
   for RuleFactory in FRuleFactories do
   begin
     Rule := RuleFactory.CreateRule;
-    Output := Output + Rule.ApplyRule(Number);
+    output := Rule.ApplyRule(Number);
+    if output <> '' then break;
   end;
 
   if Output = '' then
@@ -230,4 +231,5 @@ begin
     on E: Exception do
       WriteLn(E.ClassName, ': ', E.Message);
   end;
+  readln;
 end.
